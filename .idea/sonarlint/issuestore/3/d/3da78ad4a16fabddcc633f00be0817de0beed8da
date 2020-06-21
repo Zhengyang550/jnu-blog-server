@@ -1,0 +1,6 @@
+
+œ"squid:ClassVariableVisibilityCheck'"bMake classzzProxyBeanHolder a static final constant or non-public and provide accessors if needed.(æÓŒžøÿÿÿÿ8ÀÓ’…­.
+_squid:S1444'"<Make this "public static classzzProxyBeanHolder" field final(æÓŒžøÿÿÿÿ8ÀÓ’…­.
+@squid:S2386'"Make this member "protected".(æÓŒžøÿÿÿÿ8ÀÓ’…­.
+]squid:S1118":Add a private constructor to hide the implicit public one.(Ž›‚èøÿÿÿÿ8ßá†…­.
+Qsquid:S3077'".Remove the "volatile" keyword from this field.(æÓŒžøÿÿÿÿ8ÀÓ’…­.

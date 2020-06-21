@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jnu.example.db.mapper.BlogArticleMapper">
+    <select id="getArticleListByTagName"  parameterType="java.lang.String" resultType="com.jnu.example.db.entity.BlogArticle">
+        SELECT
+            a.*
+        FROM
+            t_blog_tag t
+        LEFT JOIN t_blog_article a ON a.id = t.articleId
+        WHERE NAME = #{tagName}
+        ORDER BY ID DESC
+    </select>
+</mapper>

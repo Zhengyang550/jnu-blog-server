@@ -1,0 +1,5 @@
+
+™%squid:RedundantThrowsDeclarationCheck&"sRemove the declaration of thrown exception 'org.springframework.beans.BeansException' which is a runtime exception.(ÿ¡Ã8Ì‹¢Ö≠.
+nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(¢•“˝ˇˇˇˇ8Ã•≤â≠.
+Xsquid:S1141T"5Extract this nested try block into a separate method.(°ª¢¸˘ˇˇˇˇ8πñßä≠.
+usquid:S3776k"RRefactor this method to reduce its Cognitive Complexity from 22 to the 20 allowed.(ÅøôØˇˇˇˇˇ8êåõä≠.

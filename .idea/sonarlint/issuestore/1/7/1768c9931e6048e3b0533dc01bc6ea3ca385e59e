@@ -1,0 +1,4 @@
+
+«%squid:RedundantThrowsDeclarationCheck"sRemove the declaration of thrown exception 'org.springframework.beans.BeansException' which is a runtime exception.(ˆ’€·8°ò»‡­.
+Lsquid:EmptyStatementUsageCheck"Remove this empty statement.(ÍÊþ8ç½È‡­.
+«%squid:RedundantThrowsDeclarationCheck "sRemove the declaration of thrown exception 'org.springframework.beans.BeansException' which is a runtime exception.(¾ýˆ„8²ª»‡­.

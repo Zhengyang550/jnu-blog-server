@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/Program Files/apache-maven-3.6.1/conf/settings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../bigdataplat-cloud-server/core/src/main/java/com/goldwind/bigdataplat/core/config/shiro/JwtUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../bigdataplat-cloud-server/core/src/main/java/com/goldwind/bigdataplat/core/config/shiro/UserRealm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../bigdataplat-cloud-server/service-admin/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../bigdataplat-cloud-server/service-admin/src/main/java/com/goldwind/bigdataplat/admin/service/impl/FileServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../bigdataplat-cloud-server/service-admin/src/main/java/com/goldwind/bigdataplat/admin/service/impl/GroupServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../bigdataplat-cloud-server/service-admin/src/main/java/com/goldwind/bigdataplat/admin/service/impl/UserServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog-api/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog-api/src/main/java/com/jnu/example/db/mapper/BlogTagMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog-api/src/main/java/com/jnu/example/db/mapper/xml/BlogTagMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog-api/src/main/java/com/jnu/example/db/service/IBlogTagService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog-api/src/main/java/com/jnu/example/db/service/impl/BlogTagServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/AspectTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/BlogApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/TestAop.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/config/ConfigLogFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/config/ErrorPageConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/config/LogFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/constant/GitHubConstant.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/controller/ArticleController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/controller/CommentController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/controller/ErrorController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/controller/JwtAuthController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/controller/ReplyController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/controller/TagController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/controller/UserController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/entity/GithubUser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/handler/MyMetaObjectHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/handler/MybatisEnumTypeHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/dto/ArticleAddRequestDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/dto/ArticleRequestDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/dto/CommentAddRequestDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/dto/ReplyAddRequestDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/dto/UserAddRequestDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/dto/UserRequestDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/dto/UserUpdateRequestDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/vo/ArticleVO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/vo/CommentVO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/pojo/vo/LoginVO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/IArticleService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/ICommentService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/IJwtAuthService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/IReplyService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/IUserService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/article.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/impl/ArticleServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/impl/CommentServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/impl/JwtAuthService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/impl/JwtAuthServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/impl/ReplyServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/impl/TagServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/java/com/jnu/example/blog/service/impl/UserServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/resources/log4j.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/resources/log4j2.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/resources/log4j2.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/main/resources/log4js.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/test/java/com/example/AppConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/test/java/com/example/AspectTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/test/java/com/example/TestAop.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/test/java/com/example/TestAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/test/java/com/example/UserService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/blog/src/test/java/com/example/UserServiceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/database/blog.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/entity/BlogArticle.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/entity/BlogComment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/entity/BlogReply.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/entity/BlogUser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/handler/MyMetaObjectHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/mapper/BlogArticleMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/mapper/xml/BlogArticleMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/mapper/xml/BlogTagMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/service/IBlogArticleService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-db/src/main/java/com/jnu/example/db/service/impl/BlogArticleServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-pojo/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-pojo/src/main/java/com/jnu/example/db/entity/BlogUser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core-pojo/src/main/java/com/jnu/example/db/pojo/dto/UserUpdateRequestDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/annotation/After.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/annotation/Around.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/annotation/Aspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/annotation/Before.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/annotation/EnableAspectAutoProxy.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/annotation/Pointcut.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/annotation/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/SwaggerConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/WebConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/WebSecurityConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/security/CustomizedPasswordEncoder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/security/JwtTokenUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/security/entity/JwtUserDetails.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/security/handler/authentication/JwtAuthenticationEntryPoint.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/security/handler/authentication/JwtAuthenticationTokenFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/security/handler/authorization/JwtAccessDecisionManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/security/handler/authorization/JwtAccessDeniedHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/security/handler/authorization/JwtFilterInvocationSecurityMetadataSource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/config/security/service/JwtUserDetailsService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/constant/ContentType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/constant/EnumUserType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/constant/ResponseCode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/constant/enums/EnumUserType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/constant/enums/IBaseEnum.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/constant/enums/ResponseCode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/constant/enums/UserTypeEnum.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/enums/ContentType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/enums/EnumUserType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/enums/ResponseCode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/exception/GlobalExceptionHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/holder/ProxyBeanHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/pojo/AdvanceQueryCondition.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/pojo/CustomResponseEntity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/pojo/CustomizedPageResponseEntity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/pojo/CustomizedResponseEntity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/pojo/PageData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/pojo/QueryCondition.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/pojo/QueryConditionEnum.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/pojo/ResponseMessage.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/processor/CustomizedAopBeanPostProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/processor/CustomizedBeanFactoryPostProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/processor/CustomizedBeanPostProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/processor/CustomizedProxyInterceptor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/processor/RealizedAopBeanPostProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/processor/RegisterBeanFactoryPostProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/secure/EncryptUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/secure/JnuEncryptUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/selector/CustomizedAopImportSelector.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/selector/CustomizedImportSelector.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/CoderUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/JnuAopUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/JnuAspectUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/JnuAspetUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/JnuCollUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/JnuConfigurationUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/JnuEncryptUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/JnuMybatisPlusPageUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/JnuSpringContextUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/JnuWrappersUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/MybatisPlusPageUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/jnu/example/core/util/SpringContextUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/test/AppConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/test/com/jnu/example/AppConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/test/com/jnu/example/TestApp.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/test/com/jnu/example/TestAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/test/com/jnu/example/UserServiceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/test/com/jnu/example/core/TestAop.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/test/com/jnu/example/service/UserService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/db-code-generator/src/main/java/com/jnu/example/db/generator/CodeGenerator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/info.log">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/log/test.log">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../smart/smart-sso/smart-sso-server/deploy/dev/jdbc.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../代码/trunk/bigdataplat-cloud-server/service-admin/src/test/java/com/goldwind/bigdataplat/admin/manager/LJWBaseTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../代码/trunk/ngsp-s-auth/ngsp-s-auth-server/src/main/java/com/goldwind/ngsp/auth/server/util/WrappersUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/goldwind/basicdata-syncservice/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/goldwind/basicdata-syncservice/src/main/java/com/gw/bd/etl/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/goldwind/basicdata-syncservice/src/main/java/com/gw/bd/etl/business/AuthProcess.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/goldwind/basicdata-syncservice/src/main/java/com/gw/bd/etl/util/JsonUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/goldwind/basicdata-syncservice/src/main/resources/conf/scada.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/goldwind/basicdata-syncservice/src/main/resources/conf/sync.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/前端/react-example/react-blog-zy/src/hooks/use_fetch_list.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/前端/react-example/react-blog-zy/src/views/admin/article/edit/list.jsx">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/前端/react-example/react-blog-zy/src/views/web/home/article_list.jsx">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="H:/前端/react-example/react-blog-zy/src/views/web/home/index.jsx">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

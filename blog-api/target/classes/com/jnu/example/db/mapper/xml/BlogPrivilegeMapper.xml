@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jnu.example.db.mapper.BlogPrivilegeMapper">
+    <select id="getPrivilegeListByUserId"  parameterType="java.lang.Integer" resultType="java.util.HashMap">
+       SELECT
+        p.*
+        FROM
+        t_blog_user AS u
+        LEFT JOIN t_blog_user_role_mapping AS ur
+        ON u.id = ur.userId
+        LEFT JOIN t_blog_role AS r
+        ON r.id = ur.roleId
+        LEFT JOIN t_blog_role_privilege_mapping AS rp
+        ON r.id = rp.roleId
+        LEFT JOIN t_blog_privilege AS p
+        ON p.id = rp.privilegeId
+        WHERE u.id = #{userId}  and NOT ISNULL(p.id)
+    </select>
+
+    <select id="getPrivilegeListByPath" parameterType="java.lang.String" resultType="java.util.HashMap">
+        SELECT
+            pe.*
+        FROM
+            t_blog_privilege pe
+        LEFT JOIN t_blog_request_path_privilege_mapping re ON re.privilegeId = pe.id
+        LEFT JOIN t_blog_request_path pa ON pa.id = re.urlId
+        WHERE pa.url = #{path}
+    </select>
+</mapper>
