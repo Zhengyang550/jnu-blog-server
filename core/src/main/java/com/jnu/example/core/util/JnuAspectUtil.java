@@ -44,7 +44,7 @@ public class JnuAspectUtil {
     public static final String AROUND = "com.jnu.example.core.annotation.Around";
 
     /*
-     * 存放AOP代理的全部目标类  目标类 ->(切面类,代理方法,通知注解)  如:com.jnu.example.blog.BlogApplication -> [(com.jnu.example.blog.TestAop, testBefore, com.jnu.example.core.annotation.Before)]
+     * 存放AOP代理的全部目标类  目标类 ->(切面类,代理方法,通知注解)  如:com.jnu.example.blog.service.IArticleService -> [(com.jnu.example.blog.AspectTest, testBefore, com.jnu.example.core.annotation.Before)]
      */
     public static volatile Map<String, List<ProxyBeanHolder>> classzzProxyBeanHolder = new ConcurrentHashMap<>();
 }

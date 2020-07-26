@@ -1,8 +1,8 @@
 package com.jnu.example.core.annotation;
 
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
+        import java.lang.annotation.Retention;
+        import java.lang.annotation.RetentionPolicy;
 
 /**
  *  @Author: zy
@@ -12,5 +12,4 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface After {
     String value() default "";
-
 }

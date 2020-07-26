@@ -39,7 +39,7 @@ public class CustomizedBeanFactoryPostProcessor implements BeanFactoryPostProces
     private Map<String,String> pointCutMap = new HashMap<>();
 
     @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
+    public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory)  {
         //获取所有的bean name
         String[] beanDefinitionNames = configurableListableBeanFactory.getBeanDefinitionNames();
         for(String beanDefinitionName:beanDefinitionNames){

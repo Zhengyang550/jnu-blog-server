@@ -5,6 +5,11 @@ spring:
     name: blog
     version: 1.0
 
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.80.17.65:8848
+
   datasource:
     druid:
       url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8&allowMultiQueries=true
@@ -56,6 +61,33 @@ mybatis-plus:
 upload:
   rootPath: ./uploads
 
-#日志配置
-logging:
-  config: classpath:log4j2.xml
+
+#分布式事务配置
+seata:
+  enabled: true
+  application-id: ${spring.application.name} # Seata 应用名称，默认使用 ${spring.application.name}
+  tx-service-group: ngsp-s-auth-group   #事务分组配置
+  enable-auto-data-source-proxy: true
+  service:
+    vgroupMapping:
+      ngsp-s-auth-group: ngsp-s-auth-cluster
+    grouplist:
+      default: 10.64.200.64:8091
+    enable-degrade: false
+    disable-global-transaction: false
+  config:
+    type: nacos
+    nacos:
+      namespace:
+      group: SEATA_GROUP    #nacos控制台配置分组
+      userName: "nacos"
+      password: "nacos"
+      server-addr: ${spring.cloud.nacos.discovery.server-addr}
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server    #指定seata服务器地址
+      server-addr: ${spring.cloud.nacos.discovery.server-addr}
+      namespace:
+      userName: "nacos"
+      password: "nacos"
