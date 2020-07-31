@@ -8,7 +8,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 10.80.17.65:8848
+        server-addr: 127.0.0.1:8848
 
   datasource:
     druid:
@@ -64,7 +64,7 @@ upload:
 
 #分布式事务配置
 seata:
-  enabled: true
+  enabled: false
   application-id: ${spring.application.name} # Seata 应用名称，默认使用 ${spring.application.name}
   tx-service-group: ngsp-s-auth-group   #事务分组配置
   enable-auto-data-source-proxy: true

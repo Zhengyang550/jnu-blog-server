@@ -27,7 +27,6 @@ import java.util.*;
  *  定义注册类  用于注册目标对象和切面对象之间的关系
  *  1. 切面对象指的就是被@Aspect注解修饰的配置类对象
  *  2. 目标对象就是被@Pointcut("execution(public * com.goldwind.bigdataplat.admin.controller.*.*(..))")拦截的bean
- *
  *  完成所有BeanDefinition的扫描，找出我们所有的切面类，然后循环里面的方法，找到切点、以及所有的通知方法，然后根据注解判断通知类型（也就是前置，后置还是环绕），
  *  最后解析切点的内容，扫描出所有的目标类，放入我们定义好的容器中。
  */

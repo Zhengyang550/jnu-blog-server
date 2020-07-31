@@ -33,7 +33,7 @@
         <spring-cloud-alibaba.version>0.2.2.RELEASE</spring-cloud-alibaba.version>
 
         <!-- Spring Boot Settings -->
-        <druid.version>1.1.22</druid.version>
+        <druid.version>1.1.21</druid.version>
         <mybatis-plus.version>3.3.1</mybatis-plus.version>
 
         <!-- Commons Settings -->
@@ -129,7 +129,7 @@
                 <artifactId>jooq</artifactId>
                 <version>${jooq.version}</version>
             </dependency>
-            <!--   分布式事务   -->
+            <!--   分布式事务  版本号引用不当可能导致mybatis LocalDatetime错误  -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-seata</artifactId>

@@ -10,7 +10,6 @@ import org.springframework.core.type.AnnotationMetadata;
  *  @Author: zy
  *  @Date: 2020/6/20 17:16
  *  @Description: 自定义aop实现,提交给spring容器
- *  @import(ImportSelector.class)
  *  ImportSelector 接口有一个实现方法，返回一个字符串类型的数组，里面可以放类名，在@import(ImportSelector.class)的时候，spring会把我们返回方法里面的类全部注册到
  *  BeanDefinitionMap中，继而将对象注册到Spring容器中
  */
