@@ -6,9 +6,13 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+import com.jnu.example.core.converter.EnumConverterFactory;
+import com.jnu.example.core.converter.LocalDataTimeConverterFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.convert.support.GenericConversionService;
 
 import java.io.IOException;
 import java.time.Instant;
@@ -131,4 +135,13 @@ public class WebConfig {
         return objectMapper;
     }
 
+    /*
+     * 获取beanFactory中的conversionService，注入自定义类型转换器工厂
+     */
+    @Bean
+    public GenericConversionService getDefaultConversionService(@Autowired GenericConversionService conversionService) {
+        conversionService.addConverterFactory(new EnumConverterFactory());
+        conversionService.addConverterFactory(new LocalDataTimeConverterFactory());
+        return conversionService;
+    }
 }

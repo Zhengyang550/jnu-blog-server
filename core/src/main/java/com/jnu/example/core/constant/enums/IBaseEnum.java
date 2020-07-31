@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.jnu.example.core.JsonEnumDeserializer;
 import com.jnu.example.core.JsonEnumSerializer;
 
+
 /**
  * Author: zy
  * Description: 用户支持将http请求参数中传入的数字转换为对应的枚举值
@@ -12,7 +13,7 @@ import com.jnu.example.core.JsonEnumSerializer;
  */
 @JsonSerialize(using = JsonEnumSerializer.class)
 @JsonDeserialize(using = JsonEnumDeserializer.class)
-public interface IBaseEnum {
+public interface IBaseEnum{
     /*
      * 与数据库进行映射的值
      */
@@ -26,7 +27,7 @@ public interface IBaseEnum {
     /*
      * 将状态码装换为枚举类型
      */
-    static <E extends IBaseEnum> IBaseEnum valueOf(Class<E> enumClass, int value){
+    static <E extends IBaseEnum> IBaseEnum valueOf(Class<E> enumClass,int value){
         try {
             E[] enumConstants = enumClass.getEnumConstants();
             for (E e : enumConstants) {
@@ -42,7 +43,7 @@ public interface IBaseEnum {
     /*
      * 将枚举字符串装换为枚举类型
      */
-    static <E extends Enum<E>> IBaseEnum valueOf(Class<E> enumClass, String value) {
+    static <E extends Enum<E>> IBaseEnum valueOf(Class<E> enumClass,String value) {
         return (IBaseEnum) Enum.valueOf(enumClass, value);
     }
 }
