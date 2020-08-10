@@ -1,7 +1,7 @@
 package com.jnu.example.db.service.impl;
 
 import com.jnu.example.db.entity.BlogRequestPathPrivilegeMapping;
-import com.jnu.example.db.mapper.xml.BlogRequestPathPrivilegeMappingMapper;
+import com.jnu.example.db.mapper.BlogRequestPathPrivilegeMappingMapper;
 import com.jnu.example.db.service.IBlogRequestPathPrivilegeMappingService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

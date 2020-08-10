@@ -1,4 +1,4 @@
-package com.jnu.example.db.mapper.xml;
+package com.jnu.example.db.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jnu.example.db.entity.BlogRequestPathPrivilegeMapping;

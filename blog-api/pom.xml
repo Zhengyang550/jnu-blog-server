@@ -7,7 +7,7 @@
     <packaging>jar</packaging>
 
     <parent>
-        <artifactId>jnu-cloud-server</artifactId>
+        <artifactId>jnu-blog-server</artifactId>
         <groupId>com.jnu.example</groupId>
         <version>0.0.1</version>
         <relativePath>../pom.xml</relativePath>
