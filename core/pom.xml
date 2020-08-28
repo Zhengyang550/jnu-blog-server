@@ -84,6 +84,7 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!--   测试时使用     -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

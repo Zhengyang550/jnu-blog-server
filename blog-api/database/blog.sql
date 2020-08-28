@@ -28,8 +28,7 @@ CREATE TABLE `t_blog_article`  (
                                    `viewCount` int(11) DEFAULT 0,
                                    `createdAt` datetime(0) DEFAULT NULL,
                                    `updatedAt` datetime(0) DEFAULT NULL,
-                                   PRIMARY KEY (`id`) USING BTREE,
-                                   UNIQUE INDEX `title`(`title`) USING BTREE
+                                   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 115 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
 
 -- ----------------------------
@@ -267,7 +266,7 @@ INSERT INTO `t_blog_user` VALUES (9, 'zhengyang6', 'FDyjVY6P87Su04nUfUGQSw==', '
 INSERT INTO `t_blog_user` VALUES (10, 'zhengyang7', 'FDyjVY6P87Su04nUfUGQSw==', '18151521911@163.com', 1, NULL, 0, '2020-05-10 18:57:51', '2020-05-10 20:08:43', NULL);
 INSERT INTO `t_blog_user` VALUES (11, 'zhengyang8', 'FDyjVY6P87Su04nUfUGQSw==', '18151521911@163.com', 1, NULL, 0, '2020-05-10 18:57:51', '2020-07-31 18:56:34', NULL);
 INSERT INTO `t_blog_user` VALUES (12, 'zy', 'FDyjVY6P87Su04nUfUGQSw==', 'Gw@082033', 0, 'Zhengyang550', 0, '2020-05-11 23:20:04', '2020-07-31 18:56:32', 'https://avatars3.githubusercontent.com/u/52303982?v=4');
-INSERT INTO `t_blog_user` VALUES (14, 'admin1', 'VGNwstDIgj6Qom3TSXTV5w==', '18151521911@163.com', 0, NULL, 0, '2020-05-12 22:14:45', '2020-07-31 18:56:33', NULL);
+INSERT INTO `t_blog_user` VALUES (14, 'admin', 'VGNwstDIgj6Qom3TSXTV5w==', '18151521911@163.com', 0, NULL, 0, '2020-05-12 22:14:45', '2020-07-31 18:56:33', NULL);
 
 -- ----------------------------
 -- Table structure for t_blog_user_role_mapping

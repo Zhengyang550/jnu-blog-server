@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jnu.example.db.pojo.dto.ArticleAddRequestDTO;
+import com.jnu.example.db.pojo.dto.ArticleUpdateRequestDTO;
 import com.jnu.example.db.pojo.vo.ArticleVO;
 import com.jnu.example.db.pojo.vo.CommentVO;
 import com.jnu.example.db.pojo.vo.ReplyVO;
@@ -20,6 +21,7 @@ import com.jnu.example.db.service.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
@@ -51,24 +53,88 @@ public class ArticleServiceImpl implements IArticleService {
      * @Description: 新增文章以及文章标签
      * @Author: zy
      * @Date: 2020/5/17 19:03
-     * @param articleAddRequestDTO
+     * @param addRequestDTO
      * @Return BlogArticle:
      * @Exception :
      */
     @Override
-    public BlogArticle insertArticle(ArticleAddRequestDTO articleAddRequestDTO) {
+    public BlogArticle insertArticle(ArticleAddRequestDTO addRequestDTO) {
         //创建实体
         BlogArticle article = new BlogArticle();
-        BeanUtil.copyProperties(articleAddRequestDTO,article);
+        BeanUtil.copyProperties(addRequestDTO,article);
         article.setViewCount(0);
 
         //插入
         blogArticleService.save(article);
 
         //插入文章标签
-        if(CollUtil.isNotEmpty(articleAddRequestDTO.getTags())){
+        if(CollUtil.isNotEmpty(addRequestDTO.getTags())){
             List<BlogTag> tags = new ArrayList<>();
-            for(String tagName:articleAddRequestDTO.getTags()){
+            for(String tagName: addRequestDTO.getTags()){
+                BlogTag tag = new BlogTag();
+                tag.setArticleId(article.getId());
+                tag.setName(tagName);
+                tags.add(tag);
+            }
+            blogTagService.saveBatch(tags);
+        }
+
+        return article;
+    }
+
+    /**
+     * @Author: zy
+     * @Description: 根据文章id删除文章
+     * @Date: 2020/8/28 14:29
+     * @param artcleId
+     * @Return Boolean:
+     * @Exception :
+     */
+    @Override
+    @Transactional
+    public Boolean deleteArticle(Integer artcleId) {
+        blogTagService.remove(Wrappers.<BlogTag>lambdaQuery().eq(BlogTag::getArticleId,artcleId));
+        return blogArticleService.removeById(artcleId);
+    }
+
+    /**
+     * @Author: zy
+     * @Description: 根据文章id列表删除文章
+     * @Date: 2020/8/28 14:29
+     * @param artcleIds
+     * @Return Boolean:
+     * @Exception :
+     */
+    @Override
+    public Boolean deleteArticles(List<Integer> artcleIds) {
+        blogTagService.remove(Wrappers.<BlogTag>lambdaQuery().in(BlogTag::getArticleId,artcleIds));
+        return blogArticleService.removeByIds(artcleIds);
+    }
+
+    /**
+     * @Description: 更新文章以及文章标签
+     * @Author: zy
+     * @Date: 2020/8/28 19:03
+     * @param updateRequestDTO
+     * @Return BlogArticle:
+     * @Exception :
+     */
+    @Override
+    public BlogArticle updateArticle(ArticleUpdateRequestDTO updateRequestDTO) {
+        //创建实体
+        BlogArticle article = new BlogArticle();
+        BeanUtil.copyProperties(updateRequestDTO,article);
+
+        //插入
+        blogArticleService.updateById(article);
+
+        //删除之前所有标签
+        blogTagService.remove(Wrappers.<BlogTag>lambdaQuery().eq(BlogTag::getArticleId,updateRequestDTO.getId()));
+
+        //插入文章标签
+        if(CollUtil.isNotEmpty(updateRequestDTO.getTags())){
+            List<BlogTag> tags = new ArrayList<>();
+            for(String tagName: updateRequestDTO.getTags()){
                 BlogTag tag = new BlogTag();
                 tag.setArticleId(article.getId());
                 tag.setName(tagName);

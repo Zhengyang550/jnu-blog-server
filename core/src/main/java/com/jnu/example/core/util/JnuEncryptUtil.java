@@ -57,7 +57,9 @@ public class JnuEncryptUtil {
      */
    public static String encryptToBase64(String password){
        //对AES算法加密后的字节数组，采用Base64编码
-       return getInstance().encryptBase64(password, CharsetUtil.CHARSET_UTF_8);
+       String pass = getInstance().encryptBase64(password, CharsetUtil.CHARSET_UTF_8);
+       log.info("用户密码加密为：" + pass);
+       return pass;
    }
 
     /**

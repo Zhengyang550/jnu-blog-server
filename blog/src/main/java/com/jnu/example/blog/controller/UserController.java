@@ -41,8 +41,8 @@ public class UserController {
 
     @ApiOperation(value = "根据用户id删除用户")
     @GetMapping("/delete")
-    public CustomizedResponseEntity<Boolean> deleteUser(@ApiParam(value = "用户id",required = true) @Positive(message = "用户id必须是正整数") @RequestParam(value = "id") Integer id){
-        return CustomizedResponseEntity.success(userService.deleteUser(id));
+    public CustomizedResponseEntity<Boolean> deleteUser(@ApiParam(value = "用户id",required = true) @Positive(message = "用户id必须是正整数") @RequestParam(value = "userId") Integer userId){
+        return CustomizedResponseEntity.success(userService.deleteUser(userId));
     }
 
     @ApiOperation(value = "更新用户信息")
