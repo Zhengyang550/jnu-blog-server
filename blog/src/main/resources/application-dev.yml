@@ -1,14 +1,9 @@
 server:
-  port: 9001
+  port: 30001
 spring:
   application:
     name: blog
     version: 1.0
-
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
 
   datasource:
     druid:
@@ -31,9 +26,6 @@ spring:
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20
 
-
-  profiles:
-    active: dev
   servlet:
     multipart:
       max-file-size: 10MB
@@ -48,12 +40,6 @@ mybatis-plus:
       id-type: auto
       #字段策略 0:"忽略判断",1:"非NULL判断",2:"非空判断"
       field-strategy: 1
-      #驼峰下划线转换
-      db-column-underline: false
-      #逻辑删除配置（下面3个配置）
-      logic-delete-field: flag  # 全局逻辑删除字段值 3.3.0开始支持
-      logic-delete-value: 1     # 逻辑已删除值(默认为 1)
-      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
   configuration:
     default-enum-type-handler: com.jnu.example.blog.handler.MybatisEnumTypeHandler
 
@@ -64,33 +50,3 @@ upload:
 logging:
   level:
     com.jnu.example.db.mapper: debug
-
-#分布式事务配置
-seata:
-  enabled: false
-  application-id: ${spring.application.name} # Seata 应用名称，默认使用 ${spring.application.name}
-  tx-service-group: ngsp-s-auth-group   #事务分组配置
-  enable-auto-data-source-proxy: true
-  service:
-    vgroupMapping:
-      ngsp-s-auth-group: ngsp-s-auth-cluster
-    grouplist:
-      default: 10.64.200.64:8091
-    enable-degrade: false
-    disable-global-transaction: false
-  config:
-    type: nacos
-    nacos:
-      namespace:
-      group: SEATA_GROUP    #nacos控制台配置分组
-      userName: "nacos"
-      password: "nacos"
-      server-addr: ${spring.cloud.nacos.discovery.server-addr}
-  registry:
-    type: nacos
-    nacos:
-      application: seata-server    #指定seata服务器地址
-      server-addr: ${spring.cloud.nacos.discovery.server-addr}
-      namespace:
-      userName: "nacos"
-      password: "nacos"

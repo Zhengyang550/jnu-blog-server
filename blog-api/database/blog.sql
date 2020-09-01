@@ -11,7 +11,7 @@
  Target Server Version : 80018
  File Encoding         : 65001
 
- Date: 10/08/2020 11:40:14
+ Date: 01/09/2020 10:11:19
 */
 
 SET NAMES utf8mb4;
@@ -22,14 +22,15 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_article`;
 CREATE TABLE `t_blog_article`  (
-                                   `id` int(11) NOT NULL AUTO_INCREMENT,
-                                   `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                   `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                   `viewCount` int(11) DEFAULT 0,
-                                   `createdAt` datetime(0) DEFAULT NULL,
-                                   `updatedAt` datetime(0) DEFAULT NULL,
-                                   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 115 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `viewCount` int(11) DEFAULT 0,
+  `createdAt` datetime(0) DEFAULT NULL,
+  `updatedAt` datetime(0) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `title`(`title`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 121 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of t_blog_article
@@ -50,17 +51,18 @@ INSERT INTO `t_blog_article` VALUES (112, 'asssas', 'sasasas', 0, '2020-05-17 19
 INSERT INTO `t_blog_article` VALUES (113, 'asssssssss', 'asaaaaaaaaaa', 0, '2020-05-17 19:16:15', NULL);
 INSERT INTO `t_blog_article` VALUES (114, '窗前明月光', '**我是一个小乌龟**\n****上色', 0, '2020-05-17 19:17:43', NULL);
 INSERT INTO `t_blog_article` VALUES (115, '测试', '# **啊啊啊啊啊啊啊啊啊啊啊啊**\n## ****钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱七星****\n### 水水水水水水水水水水水水水水水水水水水\n### 是顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶', 0, '2020-05-17 19:20:37', NULL);
+INSERT INTO `t_blog_article` VALUES (116, '大数据平台400版本发版', '# 发版内容\n## 新增功能\n新增功能1\n新增功能2\n新增功能3\n新增功能4\n## 修复bug\n修复bug1\n修复bug2\n修复bug3\n', 0, '2020-08-26 12:12:07', '2020-08-28 15:03:58');
 
 -- ----------------------------
 -- Table structure for t_blog_category
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_category`;
 CREATE TABLE `t_blog_category`  (
-                                    `id` int(11) NOT NULL AUTO_INCREMENT,
-                                    `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                    `articleId` int(11) DEFAULT NULL,
-                                    PRIMARY KEY (`id`) USING BTREE,
-                                    INDEX `articleId`(`articleId`) USING BTREE
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `articleId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `articleId`(`articleId`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
 
 -- ----------------------------
@@ -68,16 +70,16 @@ CREATE TABLE `t_blog_category`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_comment`;
 CREATE TABLE `t_blog_comment`  (
-                                   `id` int(11) NOT NULL AUTO_INCREMENT,
-                                   `articleId` int(11) DEFAULT NULL,
-                                   `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                   `createdAt` datetime(0) DEFAULT NULL,
-                                   `updatedAt` datetime(0) DEFAULT NULL,
-                                   `userId` int(11) DEFAULT NULL,
-                                   PRIMARY KEY (`id`) USING BTREE,
-                                   INDEX `articleId`(`articleId`) USING BTREE,
-                                   INDEX `userId`(`userId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `articleId` int(11) DEFAULT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `createdAt` datetime(0) DEFAULT NULL,
+  `updatedAt` datetime(0) DEFAULT NULL,
+  `userId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `articleId`(`articleId`) USING BTREE,
+  INDEX `userId`(`userId`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of t_blog_comment
@@ -94,12 +96,12 @@ INSERT INTO `t_blog_comment` VALUES (7, 11, '你是一个垃圾', '2020-05-05 19
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_ip`;
 CREATE TABLE `t_blog_ip`  (
-                              `id` int(11) NOT NULL AUTO_INCREMENT,
-                              `ip` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                              `auth` tinyint(1) DEFAULT 1,
-                              `userId` int(11) DEFAULT NULL,
-                              PRIMARY KEY (`id`) USING BTREE,
-                              INDEX `userId`(`userId`) USING BTREE
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ip` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `auth` tinyint(1) DEFAULT 1,
+  `userId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `userId`(`userId`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
 
 -- ----------------------------
@@ -107,10 +109,10 @@ CREATE TABLE `t_blog_ip`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_privilege`;
 CREATE TABLE `t_blog_privilege`  (
-                                     `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
-                                     `privilegeCode` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '权限code',
-                                     `privilegeName` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '权限名',
-                                     PRIMARY KEY (`id`) USING BTREE
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `privilegeCode` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '权限code',
+  `privilegeName` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '权限名',
+  PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '权限表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -127,17 +129,17 @@ INSERT INTO `t_blog_privilege` VALUES (5, 'interface_modify_user', '修改用户
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_reply`;
 CREATE TABLE `t_blog_reply`  (
-                                 `id` int(11) NOT NULL AUTO_INCREMENT,
-                                 `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                 `createdAt` datetime(0) DEFAULT NULL,
-                                 `updatedAt` datetime(0) DEFAULT NULL,
-                                 `articleId` int(11) DEFAULT NULL,
-                                 `commentId` int(11) DEFAULT NULL,
-                                 `userId` int(11) DEFAULT NULL,
-                                 PRIMARY KEY (`id`) USING BTREE,
-                                 INDEX `articleId`(`articleId`) USING BTREE,
-                                 INDEX `userId`(`userId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `createdAt` datetime(0) DEFAULT NULL,
+  `updatedAt` datetime(0) DEFAULT NULL,
+  `articleId` int(11) DEFAULT NULL,
+  `commentId` int(11) DEFAULT NULL,
+  `userId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `articleId`(`articleId`) USING BTREE,
+  INDEX `userId`(`userId`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of t_blog_reply
@@ -150,11 +152,11 @@ INSERT INTO `t_blog_reply` VALUES (4, '我来评论', '2020-05-04 15:17:12', NUL
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_request_path`;
 CREATE TABLE `t_blog_request_path`  (
-                                        `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
-                                        `url` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '请求路径',
-                                        `description` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '路径描述',
-                                        PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '请求路径' ROW_FORMAT = Dynamic;
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `url` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '请求路径',
+  `description` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '路径描述',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '请求路径' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of t_blog_request_path
@@ -166,9 +168,9 @@ INSERT INTO `t_blog_request_path` VALUES (1, '/user/list1', '用户查询接口'
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_request_path_privilege_mapping`;
 CREATE TABLE `t_blog_request_path_privilege_mapping`  (
-                                                          `id` int(11) DEFAULT NULL COMMENT '主键id',
-                                                          `urlId` int(11) DEFAULT NULL COMMENT '请求路径id',
-                                                          `privilegeId` int(11) DEFAULT NULL COMMENT '权限id'
+  `id` int(11) DEFAULT NULL COMMENT '主键id',
+  `urlId` int(11) DEFAULT NULL COMMENT '请求路径id',
+  `privilegeId` int(11) DEFAULT NULL COMMENT '权限id'
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '路径权限关系表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -181,10 +183,10 @@ INSERT INTO `t_blog_request_path_privilege_mapping` VALUES (1, 1, 3);
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_role`;
 CREATE TABLE `t_blog_role`  (
-                                `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
-                                `roleName` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '角色名',
-                                `description` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '角色说明',
-                                PRIMARY KEY (`id`) USING BTREE
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `roleName` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '角色名',
+  `description` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '角色说明',
+  PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户角色表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -197,8 +199,8 @@ INSERT INTO `t_blog_role` VALUES (1, '管理员', NULL);
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_role_privilege_mapping`;
 CREATE TABLE `t_blog_role_privilege_mapping`  (
-                                                  `roleId` int(11) NOT NULL COMMENT '角色id',
-                                                  `privilegeId` int(11) NOT NULL COMMENT '权限id'
+  `roleId` int(11) NOT NULL COMMENT '角色id',
+  `privilegeId` int(11) NOT NULL COMMENT '权限id'
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色权限关系表' ROW_FORMAT = Fixed;
 
 -- ----------------------------
@@ -213,12 +215,12 @@ INSERT INTO `t_blog_role_privilege_mapping` VALUES (1, 3);
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_tag`;
 CREATE TABLE `t_blog_tag`  (
-                               `id` int(11) NOT NULL AUTO_INCREMENT,
-                               `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                               `articleId` int(11) DEFAULT NULL,
-                               PRIMARY KEY (`id`) USING BTREE,
-                               INDEX `articleId`(`articleId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `articleId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `articleId`(`articleId`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of t_blog_tag
@@ -235,24 +237,25 @@ INSERT INTO `t_blog_tag` VALUES (9, 'c++', 114);
 INSERT INTO `t_blog_tag` VALUES (10, 'java', 115);
 INSERT INTO `t_blog_tag` VALUES (11, 'aaaaaaaaaaaaaaaaaaaaaaaaaa', 115);
 INSERT INTO `t_blog_tag` VALUES (12, 'asdddddddddddddddddddddddddddddsssffffffffffffffffff这是一个测hi是是是是飒飒阿萨飒飒飒飒阿萨撒水水水水水水水水水水水水水水水水水水', 115);
+INSERT INTO `t_blog_tag` VALUES (16, 'c++', 116);
 
 -- ----------------------------
 -- Table structure for t_blog_user
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_user`;
 CREATE TABLE `t_blog_user`  (
-                                `id` int(11) NOT NULL AUTO_INCREMENT,
-                                `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '用户名',
-                                `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '通过 bcrypt 加密后的密码',
-                                `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '邮件',
-                                `notice` tinyint(1) NOT NULL DEFAULT 1 COMMENT '邮件通知：0不通知，1通知',
-                                `github` text CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT 'github账号',
-                                `disabledDiscuss` tinyint(1) NOT NULL DEFAULT 0 COMMENT '禁言：0不禁言，1禁言',
-                                `createdAt` datetime(0) DEFAULT NULL,
-                                `updatedAt` datetime(0) DEFAULT NULL,
-                                `avatar` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'logo',
-                                PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '用户名',
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '通过 bcrypt 加密后的密码',
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '邮件',
+  `notice` tinyint(1) NOT NULL DEFAULT 1 COMMENT '邮件通知：0不通知，1通知',
+  `github` text CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT 'github账号',
+  `disabledDiscuss` tinyint(1) NOT NULL DEFAULT 0 COMMENT '禁言：0不禁言，1禁言',
+  `createdAt` datetime(0) DEFAULT NULL,
+  `updatedAt` datetime(0) DEFAULT NULL,
+  `avatar` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'logo',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 3072 kB' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of t_blog_user
@@ -266,15 +269,15 @@ INSERT INTO `t_blog_user` VALUES (9, 'zhengyang6', 'FDyjVY6P87Su04nUfUGQSw==', '
 INSERT INTO `t_blog_user` VALUES (10, 'zhengyang7', 'FDyjVY6P87Su04nUfUGQSw==', '18151521911@163.com', 1, NULL, 0, '2020-05-10 18:57:51', '2020-05-10 20:08:43', NULL);
 INSERT INTO `t_blog_user` VALUES (11, 'zhengyang8', 'FDyjVY6P87Su04nUfUGQSw==', '18151521911@163.com', 1, NULL, 0, '2020-05-10 18:57:51', '2020-07-31 18:56:34', NULL);
 INSERT INTO `t_blog_user` VALUES (12, 'zy', 'FDyjVY6P87Su04nUfUGQSw==', 'Gw@082033', 0, 'Zhengyang550', 0, '2020-05-11 23:20:04', '2020-07-31 18:56:32', 'https://avatars3.githubusercontent.com/u/52303982?v=4');
-INSERT INTO `t_blog_user` VALUES (14, 'admin', 'VGNwstDIgj6Qom3TSXTV5w==', '18151521911@163.com', 0, NULL, 0, '2020-05-12 22:14:45', '2020-07-31 18:56:33', NULL);
+INSERT INTO `t_blog_user` VALUES (14, 'admin', 'y/cMFgrDdaKaaHP77bj3mg==', '18151521911@163.com', 0, NULL, 0, '2020-05-12 22:14:45', '2020-07-31 18:56:33', NULL);
 
 -- ----------------------------
 -- Table structure for t_blog_user_role_mapping
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_user_role_mapping`;
 CREATE TABLE `t_blog_user_role_mapping`  (
-                                             `userId` int(11) NOT NULL COMMENT '用户id',
-                                             `roleId` int(11) NOT NULL COMMENT '角色id'
+  `userId` int(11) NOT NULL COMMENT '用户id',
+  `roleId` int(11) NOT NULL COMMENT '角色id'
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户角色关系表' ROW_FORMAT = Fixed;
 
 -- ----------------------------
@@ -288,17 +291,17 @@ INSERT INTO `t_blog_user_role_mapping` VALUES (2, 1);
 -- ----------------------------
 DROP TABLE IF EXISTS `undo_log`;
 CREATE TABLE `undo_log`  (
-                             `id` bigint(20) NOT NULL AUTO_INCREMENT,
-                             `branch_id` bigint(20) NOT NULL,
-                             `xid` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                             `context` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                             `rollback_info` longblob NOT NULL,
-                             `log_status` int(11) NOT NULL,
-                             `log_created` datetime(0) NOT NULL,
-                             `log_modified` datetime(0) NOT NULL,
-                             `ext` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-                             PRIMARY KEY (`id`) USING BTREE,
-                             UNIQUE INDEX `ux_undo_log`(`xid`, `branch_id`) USING BTREE
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `branch_id` bigint(20) NOT NULL,
+  `xid` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `context` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `rollback_info` longblob NOT NULL,
+  `log_status` int(11) NOT NULL,
+  `log_created` datetime(0) NOT NULL,
+  `log_modified` datetime(0) NOT NULL,
+  `ext` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `ux_undo_log`(`xid`, `branch_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS = 1;

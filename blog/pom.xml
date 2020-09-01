@@ -55,7 +55,19 @@
             <artifactId>junit</artifactId>
         </dependency>
     </dependencies>
+
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <!--包含文件夹以及子文件夹下所有资源-->
+                    <include>**/*.*</include>
+                    <include>*.*</include>
+                </includes>
+            </resource>
+        </resources>
+
         <plugins>
             <!-- 指定maven编译的jdk版本,如果不指定,maven3默认用jdk 1.5 maven2默认用jdk1.3 -->
             <plugin>
@@ -71,6 +83,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>**/application*.properties</exclude>
+                        <exclude>**/application-*.yml</exclude>
+                        <exclude>**/application.yml</exclude>
+                        <exclude>**/application*.yml</exclude>
+                        <exclude>**/bootstrap.yml</exclude>
+                        <exclude>**/logback*.xml</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
 
             <!--   SpringBoot 项目借由 spring-boot-maven-plugin 插件，通过 Maven 将项目打包成可执行的 JAR（Fat Jar） 或者 WAR，由此插件生成的 Jar 包  -->

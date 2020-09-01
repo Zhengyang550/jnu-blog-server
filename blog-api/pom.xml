@@ -44,6 +44,7 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
     </dependencies>
+
     <build>
         <resources>
             <!--编译src/main/java目录下的xml文件-->
@@ -56,4 +57,5 @@
             </resource>
         </resources>
     </build>
+
 </project>
