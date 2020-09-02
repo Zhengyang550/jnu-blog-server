@@ -26,7 +26,7 @@ import javax.validation.constraints.Positive;
  */
 @Api(tags = "用户接口")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/blog/api/user")
 @Validated
 public class UserController {
     @Autowired

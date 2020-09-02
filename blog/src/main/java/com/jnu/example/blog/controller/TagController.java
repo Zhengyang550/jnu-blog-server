@@ -20,7 +20,7 @@ import java.util.List;
  */
 @Api(tags="标签接口")
 @RestController
-@RequestMapping("/tag")
+@RequestMapping("/blog/api//tag")
 @Validated
 public class TagController {
     @Autowired

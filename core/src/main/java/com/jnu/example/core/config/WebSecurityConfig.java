@@ -121,17 +121,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
           * 2、调用jwtAccessDecisionManager的decide方法来校验用户的权限是否足够
          */
         http.authorizeRequests().antMatchers("/login").permitAll()
-                .antMatchers("/github").permitAll()
-                .antMatchers("/user/add").permitAll()
                 .antMatchers("/swagger-ui.html").permitAll()
                 .antMatchers("/webjars/**").permitAll()
                 .antMatchers("/v2/**").permitAll()
                 .antMatchers("/null/swagger-resources/**").permitAll()
                 .antMatchers("/swagger-resources/**").permitAll()
                 .antMatchers("/favicon.ico","/css/**","/js/**").permitAll()
-                .antMatchers("/article/**").permitAll()
-                .antMatchers("/tag/**").permitAll()
-                .antMatchers("/user/**").permitAll()
+                .antMatchers("/blog/api/article/**").permitAll()
+                .antMatchers("/blog/api/tag/**").permitAll()
+                .antMatchers("/blog/api/user/**").permitAll()
+                .antMatchers("/blog/api/auth/**").permitAll()
                 .anyRequest().authenticated()
                 //配置后置处理器 所有请求都需要经过这个后置处理器处理
                 .withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {

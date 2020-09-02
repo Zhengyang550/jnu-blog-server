@@ -21,7 +21,7 @@ import javax.validation.constraints.NotNull;
  */
 @Api(tags = "文章评论接口")
 @RestController
-@RequestMapping("/comment")
+@RequestMapping("/blog/api//comment")
 @Validated
 public class CommentController {
     @Autowired
