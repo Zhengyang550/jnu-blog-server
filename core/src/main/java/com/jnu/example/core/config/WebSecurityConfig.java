@@ -131,6 +131,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/blog/api/tag/**").permitAll()
                 .antMatchers("/blog/api/user/**").permitAll()
                 .antMatchers("/blog/api/auth/**").permitAll()
+                .antMatchers("/blog/api/download/**").permitAll()
                 .anyRequest().authenticated()
                 //配置后置处理器 所有请求都需要经过这个后置处理器处理
                 .withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
