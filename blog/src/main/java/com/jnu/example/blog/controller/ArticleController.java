@@ -27,7 +27,7 @@ import java.util.List;
  */
 @Api(tags = "文章接口")
 @RestController
-@RequestMapping("/blog/api/article")
+@RequestMapping("/api/blog/article")
 @Validated
 public class ArticleController {
     @Autowired

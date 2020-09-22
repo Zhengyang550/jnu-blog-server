@@ -12,6 +12,17 @@ import org.springframework.stereotype.Service;
 public class FileServiceImpl extends AbstractFileService {
 
     /**
+     * @Author: zy
+     * @Description: 重写根路径
+     * @Date: 2020/9/22 18:49
+     * @Return :
+    */
+    @Override
+    public String getRootPath() {
+        return "./images";
+    }
+
+    /**
      * @author: zy
      * @description: 用于自定义上传文件保存到服务器的名称
      * @date: 2020/2/29 12:46

@@ -23,7 +23,7 @@ import javax.validation.constraints.NotBlank;
  */
 @Api(tags = "登录控制器")
 @RestController
-@RequestMapping("/blog/api/auth")
+@RequestMapping("/api/blog/auth")
 @Validated
 public class JwtAuthController {
     @Autowired

@@ -21,7 +21,7 @@ import javax.validation.constraints.NotNull;
 
 @Api(tags = "上传下载文件接口")
 @RestController
-@RequestMapping("/blog/api/attachment")
+@RequestMapping("/api/blog/attachment")
 public class FileServiceController {
     @Autowired
     @Qualifier("fileServiceImpl")

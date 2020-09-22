@@ -39,6 +39,7 @@ public abstract class AbstractFileService {
      */
     protected String getPathPrefix() {
         String path = rootPath;
+        //处理 ./开头的根路径
         if (rootPath.startsWith("./")) {
             path = System.getProperty("user.dir") + File.separator + rootPath.replace("./","");
         }

@@ -127,11 +127,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/null/swagger-resources/**").permitAll()
                 .antMatchers("/swagger-resources/**").permitAll()
                 .antMatchers("/favicon.ico","/css/**","/js/**").permitAll()
-                .antMatchers("/blog/api/article/**").permitAll()
-                .antMatchers("/blog/api/tag/**").permitAll()
-                .antMatchers("/blog/api/user/**").permitAll()
-                .antMatchers("/blog/api/auth/**").permitAll()
-                .antMatchers("/blog/api/download/**").permitAll()
+                .antMatchers("/api/blog/article/**").permitAll()
+                .antMatchers("/api/blog/tag/**").permitAll()
+                .antMatchers("/api/blog/user/**").permitAll()
+                .antMatchers("/api/blog/auth/**").permitAll()
+                .antMatchers("/api/blog/attachment/download/**").permitAll()
                 .anyRequest().authenticated()
                 //配置后置处理器 所有请求都需要经过这个后置处理器处理
                 .withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
