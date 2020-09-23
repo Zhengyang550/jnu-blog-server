@@ -1,6 +1,7 @@
 package com.jnu.example.blog.service;
 
 import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.URLUtil;
 import com.jnu.example.core.constant.ContentType;
 import com.jnu.example.core.constant.enums.ResponseCode;
@@ -9,7 +10,6 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
@@ -25,29 +25,25 @@ import java.util.List;
 @Data
 @Slf4j
 public abstract class AbstractFileService {
-    /*
-     * 文件保存路径
-     */
-    @Value("${upload.rootPath:./uploads}")
-    protected String rootPath;
-
     /**
      * @author: zy
      * @description: 抽象方法 获取上传或者下载的文件的基路径  可以重写该方法，改变文件存放的基路径
      * @date: 2020/5/7 11:29
      * @return ：返回文件基路径
      */
-    protected String getPathPrefix() {
-        String path = rootPath;
+    protected String getPathPrefix(String rootPath) {
+        if(StrUtil.isBlank(rootPath)){
+            rootPath = "./uploads";
+        }
         //处理 ./开头的根路径
         if (rootPath.startsWith("./")) {
-            path = System.getProperty("user.dir") + File.separator + rootPath.replace("./","");
+            rootPath = System.getProperty("user.dir") + File.separator + rootPath.replace("./","");
         }
-        File file = new File(path);
+        File file = new File(rootPath);
         if(!file.exists()){
             file.mkdirs();
         }
-        return path;
+        return rootPath;
     }
 
     /**
@@ -80,7 +76,7 @@ public abstract class AbstractFileService {
      */
     public Boolean deleteFile(String fileName){
         //获取保存文件的基路径
-        String pathPrefix = getPathPrefix();
+        String pathPrefix = getPathPrefix(null);
 
         //删除文件
         if(!FileUtil.del(pathPrefix + File.separator + fileName)){
@@ -112,7 +108,7 @@ public abstract class AbstractFileService {
      */
     public String uploadFile(MultipartFile file) {
         //获取保存文件的基路径
-        String pathPrefix = getPathPrefix();
+        String pathPrefix = getPathPrefix("");
 
         //如果文件名称已经存在 获取新的文件名
         String fileName = getFileName(pathPrefix,file.getOriginalFilename());
@@ -138,7 +134,7 @@ public abstract class AbstractFileService {
      */
     public void downloadFile(HttpServletResponse response, String fileName){
         //获取保存文件的基路径
-        String pathPrefix = getPathPrefix();
+        String pathPrefix = getPathPrefix("");
 
         //创建文件对象 下载文件
         File f = new File(pathPrefix + File.separator + fileName);

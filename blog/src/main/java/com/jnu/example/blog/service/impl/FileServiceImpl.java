@@ -18,20 +18,20 @@ public class FileServiceImpl extends AbstractFileService {
      * @Return :
     */
     @Override
-    public String getRootPath() {
-        return "./images";
+    public String getPathPrefix(String path) {
+        return super.getPathPrefix("./images");
     }
 
     /**
      * @author: zy
      * @description: 用于自定义上传文件保存到服务器的名称
      * @date: 2020/2/29 12:46
-     * @param dir: 上传目录
+     * @param pathPrefix: 上传目录
      * @param originalFilename: 原始上传的文件名
      * @return String:
      */
     @Override
-    protected String getFileName(String dir, String originalFilename) {
+    protected String getFileName(String pathPrefix,String originalFilename) {
         int lastPot = originalFilename.lastIndexOf('.');
         String suffix = "";
         if (lastPot > -1) {
