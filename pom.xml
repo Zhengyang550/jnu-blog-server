@@ -37,7 +37,7 @@
         <mybatis-plus.version>3.3.1</mybatis-plus.version>
 
         <!-- Commons Settings -->
-        <mysql.version>8.0.13</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <!--<mysql.version>5.1.47</mysql.version>-->
         <swagger2.version>2.9.2</swagger2.version>
         <fastjson.version>1.2.58</fastjson.version>
